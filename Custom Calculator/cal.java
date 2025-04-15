@@ -33,7 +33,7 @@ class MaxInputException extends Exception
 
 class Calculator
 {
-	Scanner sc = new Scanner(System.in);
+	Scanner in = new Scanner(System.in);
 	private int num1, num2;
 	private char operator;
 	
@@ -69,18 +69,14 @@ class Calculator
 	{
 		while(true)
 		{
-			
 			System.out.print("Enter number 1: ");
-			float num1 = sc.nextFloat();
-		
+			float num1 = in.nextFloat();
 			System.out.print("Enter operation (+, -, *, /): ");
-			char operator = sc.next().charAt(0);
-
+			char operator = in.next().charAt(0);
 			System.out.print("Enter number 2: ");
-			float num2 = sc.nextFloat();
-			
+			float num2 = in.nextFloat();
 			System.out.print("Output: ");
-			
+			in.close();
 			switch(operator)
 			{
 			case '+':
@@ -119,7 +115,6 @@ class Calculator
 				}
 				break;
 			}
-		
 		System.out.println("Operation Finished!");			
 		}
 	}
